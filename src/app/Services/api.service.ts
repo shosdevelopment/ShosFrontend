@@ -14,6 +14,7 @@ export class ApiService {
   */
   private url: string;
   //#endregion
+
   //#region Constructor
   public constructor(private http: HttpClient) {
     this.url = environment.apiUrl;

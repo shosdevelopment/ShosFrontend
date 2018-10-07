@@ -1,6 +1,7 @@
 export class HttpResponseModel {
     //#region Members
     public Data: any;
-    public Description: string;
+    public IsError: boolean;
+    public ErrorType: number;
     //#endregion
 }
