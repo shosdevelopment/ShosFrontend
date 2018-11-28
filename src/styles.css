@@ -1,1 +1,9 @@
 @import "~bootstrap/dist/css/bootstrap.css";
+
+#introduction {
+  background: url('./assets//images/logo.jpg') 0% 0%/cover
+}
+
+.fill-viewport {
+  min-height: 100vh
+}

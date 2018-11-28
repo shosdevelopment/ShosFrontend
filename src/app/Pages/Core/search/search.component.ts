@@ -10,7 +10,7 @@ import { BasePageAbstract } from 'src/app/Abstracts/base-page.abstract';
 })
 export class SearchComponent extends BasePageAbstract implements OnDestroy {
   //#region Members
-  public searchTexbox: string;
+  public searchTextBox: string;
   //#endregion
 
   //#region Constructor
@@ -28,7 +28,12 @@ export class SearchComponent extends BasePageAbstract implements OnDestroy {
 
   //#region Public Methods
   public search(): void {
-    console.log('search(' + this.searchTexbox + ')');
+    console.log('search(' + this.searchTextBox + ')');
+
+    if (this.isStringNullOrEmpty(this.searchTextBox)) {
+      console.error('Search text box is empty, aborting.');
+      return;
+    }
 
     this.coreService.search()
       .subscribe(

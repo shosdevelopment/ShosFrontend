@@ -1,5 +1,22 @@
-<p>
-  search works!
-</p>
+<section id="introduction">
+  <div class="container">
+    <div class="row fill-viewport align-items-center">
+      <div class="col-12 col-md-8">
 
-{{ message }}
+        <h1 class="text-white">What are you looking for?</h1>
+        <p class="text-white lead">We're searching all over the globe for your request</p>
+
+        <div class="form-group row">
+          <div class="col-12 col-md-6">
+            <input [(ngModel)]="searchTextBox" id="searchTextBox" type="text" class="form-control form-control-lg"
+              placeholder="I want...">
+          </div>
+          <div class="col-12 col-md-2">
+            <button (click)="search()" type="button" class="btn btn-primary form-control-lg px-5">Search</button>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>
