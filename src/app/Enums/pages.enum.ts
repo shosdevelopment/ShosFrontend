@@ -1,4 +1,3 @@
 export enum PagesEnum {
-    Home = 1,
-    Login = 2,
+    Search = 1
 }

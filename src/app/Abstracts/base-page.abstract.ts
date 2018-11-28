@@ -17,11 +17,8 @@ export class BasePageAbstract {
     */
     public navigateToPage(page: PagesEnum): void {
         switch (page) {
-            case PagesEnum.Home:
+            case PagesEnum.Search:
                 this.router.navigateByUrl('/');
-                break;
-            case PagesEnum.Login:
-                this.router.navigateByUrl('/login');
                 break;
 
             default:

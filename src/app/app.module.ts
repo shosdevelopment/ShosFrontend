@@ -7,9 +7,8 @@ import { AuthInterceptorService } from './Services/auth-interceptor.service';
 
 //#region Pages
 import { AppComponent } from './app.component';
-import { SearchComponent } from './Pages/General/search/search.component';
-import { LoginComponent } from './Pages/Authentication/login/login.component';
-import { PageNotFoundComponent } from './Pages/General/page-not-found/page-not-found.component';
+import { SearchComponent } from './Pages/Core/search/search.component';
+import { PageNotFoundComponent } from './Pages/Core/page-not-found/page-not-found.component';
 //#endregion
 
 //#region Modules
@@ -19,7 +18,6 @@ import { RouteModule } from './Modules/route.module';
 @NgModule({
   declarations: [
     AppComponent,
-    LoginComponent,
     SearchComponent,
     PageNotFoundComponent,
   ],
