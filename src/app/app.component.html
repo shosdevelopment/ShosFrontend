@@ -1,16 +1,18 @@
 <header>
-  <!-- Fixed navbar -->
-  <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
-    <a class="navbar-brand" href="#">Shos</a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse"
-      aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarCollapse">
-      <ul class="navbar-nav mr-auto">
-        <li class="nav-item active">
-          <a class="nav-link" href="#">Home</a>
-        </li>
+  <nav>
+    <div class="menu-icon">
+      <i class="fa fa-bars fa-2x"></i>
+    </div>
+    <div class="logo-navbar">
+      Shos
+    </div>
+    <div class="menu">
+      <ul>
+        <li><span class="cursor-pointer" (click)="navigateToPage(pagesEnum.Search)">Home</span></li>
+        <li><span class="cursor-pointer" (click)="navigateToPage(pagesEnum.Search)">About</span></li>
+        <li><span class="cursor-pointer" (click)="navigateToPage(pagesEnum.Search)">My Profile</span></li>
+        <li><span class="cursor-pointer" (click)="navigateToPage(pagesEnum.Search)">Donate</span></li>
+        <li><span class="cursor-pointer" (click)="navigateToPage(pagesEnum.Search)">Owners</span></li>
       </ul>
     </div>
   </nav>
