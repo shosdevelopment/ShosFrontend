@@ -1,5 +1,6 @@
 import { Router } from '@angular/router';
 import { Component, OnDestroy } from '@angular/core';
+import { ItemModel } from 'src/app/Models/item.model';
 import { CoreService } from 'src/app/Pages/Core/core.service';
 import { BasePageAbstract } from 'src/app/Abstracts/base-page.abstract';
 
@@ -11,6 +12,7 @@ import { BasePageAbstract } from 'src/app/Abstracts/base-page.abstract';
 export class SearchComponent extends BasePageAbstract implements OnDestroy {
   //#region Members
   public searchTextBox: string;
+  public items: ItemModel[];
   //#endregion
 
   //#region Constructor
@@ -37,8 +39,12 @@ export class SearchComponent extends BasePageAbstract implements OnDestroy {
 
     this.coreService.search()
       .subscribe(
-        (success) => {
-          console.log(success);
+        (success: ItemModel[]) => {
+          this.items = success;
+          setTimeout(() => {
+            window.scroll({ top: 500, left: 0, behavior: 'smooth' });
+          }, 500);
+
         },
         (error) => {
           console.error(error);
